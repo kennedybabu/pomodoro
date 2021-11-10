@@ -1,7 +1,8 @@
-from flask import render_template
-from app import app
+from flask import render_template, request, redirect, url_for
+from . import main
+from ..models import User
 
-@app.route('/')
+@main.route('/')
 def index():
     '''
     View root function that returns the index page and its data
