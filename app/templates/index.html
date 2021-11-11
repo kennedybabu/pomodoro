@@ -9,7 +9,11 @@
 {% block content %}
    
      <div class="overlay">
-        
+        <h3 class='intro-heading'>welcome, <br> Be more proactive with<br>Pomodoro</h3>
+        <div class="holder">
+            <a href="{{url_for('auth.login')}}">sign in</a>
+            <a href="{{url_for('auth.register')}}">join</a>
+        </div>
      </div>   
 {% endblock %}
 </div>
