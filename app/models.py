@@ -1,4 +1,3 @@
-from enum import unique
 from . import db
 
 
@@ -7,14 +6,14 @@ class User(db.Model):
 
     id = db.Column(db.Integer, primary_key =True)
     username = db.Column(db.String(255))
-    session = db.Relationship('Session', backref='user', lazy='dynamic')
+    session = db.relationship('Session', backref='user', lazy='dynamic')
 
     def __repr__(self):
         return f'User {self.username}'
 
 class Session(db.Model):
     __tablename__ = 'sessions'
-
+    id = db.Column(db.Integer, primary_key = True)
     title = db.Column(db.String(255), unique=True)
     work_time = db.Column(db.Integer)
     break_time = db.Column(db.Integer)
