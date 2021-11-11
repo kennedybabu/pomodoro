@@ -1,3 +1,6 @@
-h4 {
-    color:tomato;
+:root {
+    --light-pink: #E23E57;
+    --light-purple: #88304E;
+    --dark-purple: #522546;
+    --darker-purple: #311D3F;
 }
